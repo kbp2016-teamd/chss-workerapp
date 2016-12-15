@@ -1,10 +1,980 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_questionaire"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.chss.QuestionaireActivity">
+    tools:context=".QuestionaireActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_weight" />
+
+                <EditText
+                    android:id="@+id/editTextWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="7"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutTemperature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_temperature" />
+
+                <EditText
+                    android:id="@+id/editTextTemperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="7"
+                    android:inputType="textEmailAddress" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutBloodCough"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_cough_blood" />
+
+                <EditText
+                    android:id="@+id/editTextBloodCough"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="7"
+                    android:inputType="text" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutSystBP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_syst_blood_pressure" />
+
+                <EditText
+                    android:id="@+id/editTextSystBP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="7"
+                    android:inputType="textEmailAddress" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutDiaBP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_dia_blood_pressure" />
+
+                <EditText
+                    android:id="@+id/editTextDiaBP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="7"
+                    android:inputType="text" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutCough"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_cough" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupCough"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupCoughYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupCoughNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutChestPain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_chest_pain" />
+
+
+                <RadioGroup
+                    android:id="@+id/radioGroupChestPain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupChestPainYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupChestPainNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutParalysis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_paralysis" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupParalysis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupParalysisYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupParalysisNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layoutCongestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_congestion" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupCongestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupCongestionYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupCongestionNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutHeadache"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_headache" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupHeadache"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupHeadacheYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupHeadacheNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutSneezing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_sneezing" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupSneezing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupSneezingYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupSneezingNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutDryCough"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_dry_cough" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupDryCough"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupDryCoughYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupDryCoughNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutSoreThroat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_sore_throat" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupSoreThroat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupSoreThroatYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupSoreThroatNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutChills"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_chills" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupChills"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupChillsYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupChillsNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutVomiting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_vomiting" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupVomiting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupVomitingYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupVomitingNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutLossofBalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_loss_of_balance" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupLossofBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupLossofBalanceYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupLossofBalanceNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutDizziness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_dizziness" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupDizziness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupDizzinessYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupDizzinessNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutBlurredVision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_blurred_vision" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupBlurredVision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupBlurredVisionYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupBlurredVisionNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutNumbness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_numbness" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupNumbness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupNumbnessYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupNumbnessNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutNausea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_nausea" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupNausea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupNauseaYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupNauseaNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutWeightGain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_weight_gain" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupWeightGain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupWeightGainYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupWeightGainNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutHeartburn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_heartburn" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupHeartburn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupHeartburnYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupHeartburnNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutPalpitations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_palpitations" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupPalpitations"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupPalpitationsYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupPalpitationsNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutSwollenLymth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_swollen_lymth" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupSwollenLymth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupSwollenLymthYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupSwollenLymthNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutDiarrhea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_diarrhea" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupDiarrhea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupDiarrheaYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupDiarrheaNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutJointPain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_joint_pain" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupJointPain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupJointPainYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupJointPainNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutMuscleAche"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_muscle_ache" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupMuscleAche"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupMuscleAcheYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupMuscleAcheNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutSkinRash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_skin_rash" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupSkinRash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupSkinRashYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupSkinRashNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutShortnessofBreath"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_shortness_of_breath" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupShortnessofBreath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupShortnessofBreathYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupShortnessofBreathNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutWeightLoss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_weight_loss" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupWeightLoss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupWeightLossYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupWeightLossNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutWeakness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_weakness" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupWeakness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupWeaknessYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupWeaknessNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutFatigue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_fatigue" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupFatigue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupFatigueYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupFatigueNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_sweats" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupSweats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioGroupSweatsYes"
+                        style="@style/MyTopPositiveRadioButton"
+                        android:text="@string/response_yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioGroupSweatsNo"
+                        style="@style/MyBottomNegativeRadioButton"
+                        android:text="@string/response_no" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/tiny" >
+        <Button
+            android:id="@+id/createEvaluation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_submit" />
+    </LinearLayout>
+</LinearLayout>

@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewPatientActivity">
+    tools:context=".ViewPatientActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,138 +17,154 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:layout_marginTop="@dimen/small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/tiny"
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/textView"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="First Name" />
+                    android:text="First Name"
+                    android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/editTextFirstName"
+                <TextView
+                    android:id="@+id/textViewFirstName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="7"
-                    android:inputType="text" />
+                    android:text="Text"
+                     />
             </LinearLayout>
 
             <LinearLayout
+                android:layout_marginTop="@dimen/small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/tiny"
                 android:orientation="horizontal">
 
                 <TextView
+                    android:textStyle="bold"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Last Name" />
 
-                <EditText
-                    android:id="@+id/editTextLastName"
+                <TextView
+                    android:id="@+id/textViewLastName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="7"
-                    android:inputType="text" />
+                    android:text="Text"
+                     />
             </LinearLayout>
             <LinearLayout
+                android:layout_marginTop="@dimen/small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/tiny"
                 android:orientation="horizontal">
 
                 <TextView
+                    android:textStyle="bold"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="ID Number" />
 
-                <EditText
-                    android:id="@+id/editTextIDNumber"
+
+                <TextView
+                    android:id="@+id/textViewIDNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="7"
-                    android:inputType="text" />
+                    android:text="Text"
+                     />
             </LinearLayout>
 
 
             <LinearLayout
+                android:layout_marginTop="@dimen/small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/tiny"
                 android:orientation="horizontal">
 
                 <TextView
+                    android:textStyle="bold"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Address" />
 
-                <EditText
-                    android:id="@+id/editTextAddress"
+                <TextView
+                    android:id="@+id/textViewAddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="7"
-                    android:inputType="text" />
+                    android:text="Text" />
             </LinearLayout>
             <LinearLayout
+                android:layout_marginTop="@dimen/small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/tiny"
                 android:orientation="horizontal">
 
                 <TextView
+                    android:textStyle="bold"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Genger" />
 
-                <Spinner
+                <TextView
                     android:id="@+id/spinnerGender"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="Text" />
             </LinearLayout>
             <LinearLayout
+                android:layout_marginTop="@dimen/small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/tiny"
                 android:orientation="horizontal">
 
                 <TextView
+                    android:textStyle="bold"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Date of Birth" />
 
-                <EditText
-                    android:id="@+id/editTextDateOfBirth"
+                <TextView
+                    android:id="@+id/textViewDateOfBirth"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="7"
+                    android:text="Text"
                     android:inputType="number" />
             </LinearLayout>
             <LinearLayout
+                android:layout_marginTop="@dimen/small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/tiny"
                 android:orientation="horizontal">
 
                 <TextView
+                    android:textStyle="bold"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Height" />
 
-                <EditText
-                    android:id="@+id/editTextHeight"
+                <TextView
+                    android:id="@+id/textViewHeight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="7"
-                    android:inputType="text" />
+                    android:text="Text"
+                     />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
@@ -159,9 +175,9 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/tiny" >
         <Button
-            android:id="@+id/buttonCreate"
+            android:id="@+id/buttonAddEvaluation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add Patient" />
+            android:text="Add Evaluation" />
     </LinearLayout>
 </LinearLayout>

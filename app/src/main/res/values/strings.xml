@@ -4,8 +4,8 @@
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Login</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
@@ -15,4 +15,55 @@
     </string>
     <string name="action_add_patient">Add Patient</string>
     <string name="hint_search_for_patient">Search for patient</string>
+    <string name="text_select">-- Select --</string>
+    <string-array name="spinnerOptionsTitles">
+        <item>@string/text_select</item>
+        <item>Mr</item>
+        <item>Mrs</item>
+        <item>Ms</item>
+        <item>Dr</item>
+    </string-array>
+    <string name="title_activity_test_main">TestMainActivity</string>
+    <string name="title_activity_test2_main">Test2MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="response_yes">Yes</string>
+    <string name="response_no">No</string>
+    <string name="action_submit">Submit</string>
+    <string name="text_weight_loss">Weight Loss</string>
+    <string name="text_weakness">Weakness</string>
+    <string name="text_fatigue">Fatigue</string>
+    <string name="text_weight">Weight</string>
+    <string name="text_temperature">Temperature</string>
+    <string name="text_cough_blood">Cough Blood</string>
+    <string name="text_syst_blood_pressure">Syst Blood Pressure</string>
+    <string name="text_dia_blood_pressure">Dia Blood Pressure</string>
+    <string name="text_cough">Cough</string>
+    <string name="text_chest_pain">Chest Pain</string>
+    <string name="text_paralysis">Paralysis</string>
+    <string name="text_congestion">Congestion</string>
+    <string name="text_headache">Headache</string>
+    <string name="text_sneezing">Sneezing</string>
+    <string name="text_dry_cough">Dry Cough</string>
+    <string name="text_sore_throat">Sore Throat</string>
+    <string name="text_chills">Chills</string>
+    <string name="text_vomiting">Vomiting</string>
+    <string name="text_loss_of_balance">Loss of Balance</string>
+    <string name="text_dizziness">Dizziness</string>
+    <string name="text_blurred_vision">Blurred Vision</string>
+    <string name="text_numbness">Numbness</string>
+    <string name="text_nausea">Nausea</string>
+    <string name="text_weight_gain">Weight Gain</string>
+    <string name="text_heartburn">Heartburn</string>
+    <string name="text_palpitations">Palpitations</string>
+    <string name="text_swollen_lymth">Swollen Lymth</string>
+    <string name="text_diarrhea">Diarrhea</string>
+    <string name="text_joint_pain">Joint Pain</string>
+    <string name="text_muscle_ache">Muscle Ache</string>
+    <string name="text_skin_rash">Skin Rash</string>
+    <string name="text_shortness_of_breath">Shortness of Breath</string>
+    <string name="text_sweats">Sweats</string>
 </resources>
